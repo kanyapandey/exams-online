@@ -1,0 +1,17 @@
+.container-box {
+    display: flex;
+    height: 100%;
+  }
+  
+  .item-box {
+    min-height: 90vh;
+    width: 20%; /* A fixed width as the default */
+  }
+  
+  .item-center { 
+    flex-grow: 1; /* Set the middle element to grow and stretch */
+  }
+  
+  .item + .item { 
+    margin-left: 2%; 
+  }

@@ -1,0 +1,61 @@
+/* make the customizations */
+$theme-colors: (
+  "info": rgb(214, 207, 205),
+  "danger": teal,
+  "light": #eceeff,
+);
+$light: #eceeff;
+
+.main-container {
+  margin-left: 3em;
+  margin-right: 3em;
+  min-height: 12em;
+}
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
+
+/* over ride classes*/
+.bg-light-yellow {
+  background-color: #f2ed6f;
+}
+
+// max height
+.mh {
+  min-height: 12em;
+}
+
+// set app margin
+.app-margin {
+  margin-left: 3em;
+  margin-right: 3em;
+}
+// no padding
+.np {
+  padding: 0;
+}
+
+/* background colors*/
+.bg-1 {
+  background-color: $light;
+}
+
+.bg-2 {
+  background-color: $light;
+}
+.pt-0 {
+  padding-top: 0;
+}
+.f-inline {
+  .form-control {
+    display: inline !important;
+  }
+}
+
+/* create test component*/
+#create-test {
+  .panel-center {
+    // max-height:65vh;
+    overflow: scroll;
+  }
+}
