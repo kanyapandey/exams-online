@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
-import { Container, Row, Col, Button } from "react-bootstrap";
+import { Container, Row, Col, Button, Pagination } from "react-bootstrap";
 import EditOptionsMcq from "./options-mcq";
 
 export default class editquestionmcq extends Component {
@@ -17,8 +17,16 @@ export default class editquestionmcq extends Component {
         </Form>
         <EditOptionsMcq options={text}></EditOptionsMcq>
         <Row className="text-center">
-          <Col xs={{span:3,offset:4}}>
-            <Button size="sm" variant="success">Save</Button>
+          <Col xs={{ span: 3, offset: 4 }}>
+            <Button size="sm" variant="success">
+              Save
+            </Button>
+          </Col>
+          <Col xs={{ span: 3, offset: 1 }}>
+            <Pagination>
+              <Pagination.Prev />
+              <Pagination.Next />
+            </Pagination>
           </Col>
         </Row>
       </Container>
