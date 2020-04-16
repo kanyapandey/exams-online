@@ -4,7 +4,7 @@ import { Route } from 'react-router-dom'
 import CreateTestForm from './create-test-form'
 import AddQuestionPanel from './add-question.panel'
 import ViewQuestionsButtons from './view-questions.buttons'
-import editquestionmcq from './question/edit-question-mcq'
+import editquestionmcq from './question/edit/question'
 
 export interface Props {
   name: string;

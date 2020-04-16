@@ -3,14 +3,14 @@ import { Container, InputGroup, FormControl } from "react-bootstrap";
 import { FaPlus, FaMinus } from "react-icons/fa";
 import { bindActionCreators, Dispatch } from "redux";
 import { connect } from "react-redux";
-import { addoption, removeOption, updateOptions } from "../_store/exams.actions";
+import { addoption, removeOption, updateOptions } from "../../_store/exams.actions";
 
 interface Props {
   options: string[];
   updateOptions?:Function
 }
 
-export class EditOptionsMcq extends React.Component<Props, Props> {
+export class ViewOptions extends React.Component<Props, Props> {
 
   addOption = (event: any) => {
     console.log("added option");
@@ -29,9 +29,9 @@ export class EditOptionsMcq extends React.Component<Props, Props> {
     this.setState({ options: [...this.props.options] });
   }
 
-  // componentDidUpdate(){
-  //   this.setState({ options: [...this.props.options] });
-  // }
+  componentDidUpdate(){
+    this.setState({ options: [...this.props.options] });
+  }
 
   render() {
     const logValue = (event: any) => {
@@ -97,4 +97,4 @@ const mapDispatchToProps = (dispatch: Dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(EditOptionsMcq);
+export default connect(mapStateToProps, mapDispatchToProps)(ViewOptions);

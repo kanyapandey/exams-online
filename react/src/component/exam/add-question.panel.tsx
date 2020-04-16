@@ -6,15 +6,10 @@ import Col from "react-bootstrap/Col";
 import { Container, Button } from "react-bootstrap";
 import { userSelected } from "../../_store/actions/app.actions";
 import { bindActionCreators, Dispatch } from "redux";
-import { addQuestions} from './_store/exams.actions'
+import { addQuestion } from "./_store/exams.actions";
 import { connect } from "react-redux";
 
-export  class AddQuestionPanel extends Component<any,any> {
-
-    componentDidMount(){
-        console.log(this.props.createTest);
-    }
-
+export class AddQuestionPanel extends Component<any, any> {
   render() {
     return (
       <Container fluid className="p-4">
@@ -32,7 +27,9 @@ export  class AddQuestionPanel extends Component<any,any> {
             </Form.Group>
             <Row>
               <Col>
-                <Button disabled variant="info">added 10</Button>
+                <Button disabled variant="info">
+                  added 10
+                </Button>
               </Col>
             </Row>
           </Form>
@@ -42,16 +39,14 @@ export  class AddQuestionPanel extends Component<any,any> {
   }
 }
 
+const mapStateToProps = (state: any) => {
+  return {
+    createTest: state,
+  };
+};
 
-const mapStateToProps = (state:any) => {
-    return {
-      createTest: state
-    }
-  }
-  
-const mapDispatchToProps = (dispatch: Dispatch)=>{
-    console.log(userSelected,'##')
-    return bindActionCreators({ addQuestions }, dispatch)
-
-}
+const mapDispatchToProps = (dispatch: Dispatch) => {
+  console.log(userSelected, "##");
+  return bindActionCreators({ addQuestion }, dispatch);
+};
 export default connect(mapStateToProps, mapDispatchToProps)(AddQuestionPanel);

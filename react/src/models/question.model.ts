@@ -1,4 +1,6 @@
-export interface Question<T>{
-type:T,
-options:any[]
+export interface Question<T> {
+  id: number;
+  text: string;
+  type: T;
+  options: any[];
 }

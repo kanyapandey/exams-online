@@ -3,17 +3,12 @@ import { connect } from "react-redux";
 import { userSelected} from '../../../_store/actions/app.actions'
 import { match } from 'react-router-dom'
 import { Dispatch, bindActionCreators } from "redux";
-import EditOptionsMcq from './options-mcq'
+import { EditOptionsMcq } from "./edit/options";
 
 
  class question extends React.Component<any, any> {
 
     componentDidMount(){
-
-        console.log(this.props.match.params);
-
-        console.log(this.props.createTest);
-
         this.props.userSelected('mohit');
     }
 

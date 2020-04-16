@@ -1,0 +1,12 @@
+.question{
+    .col-3{
+        top:-1.9em;
+        background-color: red($color: #000000);
+    }
+    .pagination{
+        top:-2.7em;
+        li{
+            padding: 0.4em;
+        }
+    }
+}
